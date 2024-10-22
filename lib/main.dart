@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:latihan_2/ui/poli_page.dart';
+import 'package:latihan_2/ui/beranda.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,8 +12,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      title: 'Klinik App',
-      home: PoliPage(),
+      debugShowCheckedModeBanner: false,
+      title: 'Klinik',
+      home: Beranda(),
     );
   }
 }

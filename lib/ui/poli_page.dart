@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:latihan_2/model/poli.dart';
 import 'package:latihan_2/ui/poli_form.dart';
 import 'package:latihan_2/ui/poli_item.dart';
+import 'package:latihan_2/widget/sidebar.dart';
 
 class PoliPage extends StatefulWidget {
   const PoliPage ({super.key});
@@ -14,6 +15,7 @@ class _MyWidgetState extends State<PoliPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Sidebar(),
       appBar: AppBar(
         title: const Text("Data Poli"),
         actions: [
