@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:latihan_2/ui/beranda.dart';
 
 class Login extends StatefulWidget {
-  const Login({Key? key}):super(key: key);
+  const Login({super.key});
+  @override
   _LoginState createState() => _LoginState();
 }
 
@@ -15,23 +16,23 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        child: SafeArea(child: Container(
+        child: SafeArea(child: SizedBox(
           height: MediaQuery.of(context).size.height,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("Login Admin",
+              const Text("Login Admin",
               style: TextStyle(fontSize: 22, fontWeight: FontWeight.w500)),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Center(
                 child: Form(
                   key: _formKey,
-                  child: Container(
+                  child: SizedBox(
                     width:  MediaQuery.of(context).size.height/1.3,
                     child: Column(
                       children: [
-                        _usernameTextField(),SizedBox(height: 20),
-                        _passwordTextField(),SizedBox(height: 40),
+                        _usernameTextField(),const SizedBox(height: 20),
+                        _passwordTextField(),const SizedBox(height: 40),
                         _tombolLogin()],
                     ),
                   ),
@@ -65,7 +66,7 @@ class _LoginState extends State<Login> {
         child: ElevatedButton(child: const Text("Login"),
         onPressed:(){
           Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Beranda()));
+                context, MaterialPageRoute(builder: (context) => const Beranda()));
         } ),
     );
   }

@@ -4,7 +4,7 @@ import 'package:latihan_2/ui/poli_login.dart';
 import 'package:latihan_2/ui/poli_page.dart';
 
 class Sidebar extends StatelessWidget {
-  const Sidebar({Key? key}):super(key: key);
+  const Sidebar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,32 +12,32 @@ class Sidebar extends StatelessWidget {
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
-          UserAccountsDrawerHeader(
+          const UserAccountsDrawerHeader(
             accountName: Text("Admin"), 
             accountEmail: Text("admin@admin.com")),
           ListTile(
-            leading: Icon(Icons.home),
-            title: Text("Beranda"),
+            leading: const Icon(Icons.home),
+            title: const Text("Beranda"),
             onTap: (){
               Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Beranda()));
+                context, MaterialPageRoute(builder: (context) => const Beranda()));
             },
           ),
           ListTile(
-            leading: Icon(Icons.accessible),
-            title: Text("Poli"),
+            leading: const Icon(Icons.accessible),
+            title: const Text("Poli"),
             onTap: (){
               Navigator.push(
-                context, MaterialPageRoute(builder: (context) => PoliPage()));
+                context, MaterialPageRoute(builder: (context) => const PoliPage()));
             },
           ),
           ListTile(
-            leading: Icon(Icons.logout_rounded),
-            title: Text("Keluar"),
+            leading: const Icon(Icons.logout_rounded),
+            title: const Text("Keluar"),
             onTap: (){
               Navigator.pushAndRemoveUntil(
                 context, 
-                MaterialPageRoute(builder: (context) => Login()),(Route<dynamic> route) => false);
+                MaterialPageRoute(builder: (context) => const Login()),(Route<dynamic> route) => false);
             },
           )
         ],
